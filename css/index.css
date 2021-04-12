@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main-container{
+    height: 100vh; /* 화면 높이의 퍼센트 100vh->100% , 1vh->1%*/
+    /* background-color: #01579b; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-item{
+    height: 95vh;
+    width: 100vh;
+    background-color: salmon;
+}
