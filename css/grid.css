@@ -1,0 +1,17 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/* 비율로 설정 */
+    grid-template-rows: repeat(3,33vh);
+}
+
+.item{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px;
+    border: 2px solid #ffffff;
+  border-radius: 5px;
+}
+
+
