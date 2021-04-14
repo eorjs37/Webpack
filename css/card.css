@@ -1,6 +1,15 @@
 .card{
     display: grid;
+    overflow: hidden;
     background-color: #E0E0E0;
-    height: 100vh;
-    width: 100vh;
+    border-radius: 5px;
+    clear:both;
+    width: 30vh;
+    height: 30vh;
+    grid-template-areas: 
+            "cityname cityname cityname"
+            "temperature . airqulity"
+            "currentdetail currentdetail currentdetail"
+            "tommorrow tommorrow tommorrow"
+            ;
 }
