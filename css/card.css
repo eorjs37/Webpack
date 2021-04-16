@@ -1,15 +1,118 @@
 .card{
     display: grid;
-    overflow: hidden;
     background-color: #E0E0E0;
     border-radius: 5px;
+    overflow: hidden;
     clear:both;
-    width: 30vh;
-    height: 30vh;
+    width: 29vh;
+    height: 100%;
     grid-template-areas: 
             "cityname cityname cityname"
             "temperature . airqulity"
             "currentdetail currentdetail currentdetail"
             "tommorrow tommorrow tommorrow"
             ;
+    grid-auto-rows: 1fr 1fr 2fr 2fr;
+    z-index: 1;
+    
 }
+
+.cityname{
+    grid-area: cityname;
+    float: left;
+    height: 30px;
+    padding: 10px;
+}
+
+/* 온도 */
+.temperature{
+    grid-area: temperature;
+    display: flex;
+    flex-direction :column;
+    padding: 0px 10px;
+}
+
+/* 에어 퀄리티 */
+.airqulity{
+    grid-area: airqulity;
+    display: flex;
+    flex-direction :column;
+    padding: 0px 10px;
+}
+
+/* currentdetail 현재날씨 상세 */
+.currentdetail{
+    margin-top: 5px;
+    grid-area: currentdetail;
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tommorrow 미래날씨 상세 */
+.tommorrow{
+    margin-top: 5px;
+    grid-area: tommorrow;
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.currentOuter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: #999999;
+    width: 95%;
+    height: 7vh;
+    border-radius: 5px;
+}
+
+.tommorrowOuter{
+    display: grid;
+    background-color: #666666;
+    width: 95%;
+    height: 7vh;
+    border-radius: 5px;
+}
+
+/* detail-item */
+.detail-item:nth-child(1){
+    grid-column: 1/4;
+}
+
+h2.title{
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+p.title{
+    font-size: 14px;
+    margin: 0px;
+}
+
+p.percent{
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.good{
+    color : #33CC33;
+}
+
+.bad{
+    color : #FF0000;
+}
+
+.normal{
+    color : #000000;
+}
+

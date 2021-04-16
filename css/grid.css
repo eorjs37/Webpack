@@ -1,7 +1,7 @@
 .grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);/* 비율로 설정 */
-    grid-template-rows: repeat(3,33vh);
+    grid-template-rows: repeat(3,300px);
 }
 
 .item{
