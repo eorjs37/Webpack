@@ -1,17 +1,28 @@
 .grid-container{
     display: grid;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
     grid-template-columns: repeat(3,1fr);/* 비율로 설정 */
-    grid-template-rows: repeat(3,300px);
+    -ms-grid-rows: 1fr 10px 1fr 10px 1fr;
+    grid-template-rows: repeat(3,1fr);
     grid-gap: 10px;
+    height: 95vh;
+    margin-top: 10px;
 }
 
 .item{
     display: grid;
-    justify-content: center;
-    align-items: center;
+    display: -ms-grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
-    margin: 10px;
     height: 100%;
+    background-color: #E0E0E0;
+    border-radius: 5px;
 }
 
 
