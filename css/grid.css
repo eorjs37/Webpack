@@ -1,28 +1,67 @@
+.item1{
+    background:#b46ae3; 
+}
+
 .grid-container{
-    display: grid;
     display: -ms-grid;
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-    grid-template-columns: repeat(3,1fr);/* 비율로 설정 */
-    -ms-grid-rows: 1fr 10px 1fr 10px 1fr;
-    grid-template-rows: repeat(3,1fr);
+    display: grid;
+    -ms-grid-columns: 1fr  1fr  1fr;
+    grid-template-columns: 1fr  1fr  1fr;
+    -ms-grid-rows: 1fr  1fr  1fr;
+    grid-template-rows: 1fr  1fr  1fr;
     grid-gap: 10px;
     height: 95vh;
     margin-top: 10px;
 }
+.grid-container > *:nth-child(1){
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}.grid-container > *:nth-child(2){
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+}.grid-container > *:nth-child(3){
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}.grid-container > *:nth-child(4){
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}.grid-container > *:nth-child(5){
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+}.grid-container > *:nth-child(6){
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+}.grid-container > *:nth-child(7){
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}.grid-container > *:nth-child(8){
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+}.grid-container > *:nth-child(9){
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
 
 .item{
-    display: grid;
-    display: -ms-grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+            align-items: center;        
     overflow: hidden;
     height: 100%;
     background-color: #E0E0E0;
     border-radius: 5px;
 }
 
+.wrapper{
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+}
 

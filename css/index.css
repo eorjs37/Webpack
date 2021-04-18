@@ -8,8 +8,13 @@ body {
 .main-container{
     height: 100vh; /* 화면 높이의 퍼센트 100vh->100% , 1vh->1%*/
     display: flex;
-    justify-content: center;
-    align-items: center;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .main-item{
