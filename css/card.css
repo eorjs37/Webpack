@@ -4,10 +4,104 @@
     height: 100%;
     grid-gap: 3px;
     grid-template-areas: 
-            "cityname cityname cityname"
-            "temperature . airqulity"
-            "detailouter detailouter detailouter"
-            "tommorrow tommorrow tommorrow"
+            "cityname cityname cityname" 
+            "temperature . airqulity" 
+            "detailouter detailouter detailouter" 
+            "tommorrow tommorrow tommorrow" 
             ;
-    grid-auto-rows: 0.5fr 0.5fr 2fr 2fr;
+    
+    grid-auto-rows: 0.5fr 0.5fr 2fr 2fr;        
 }
+
+
+.cityname{
+    grid-area: cityname;
+    -ms-grid-row : 1/3;
+    -ms-grid-column: 1;
+    float: left;
+}
+
+/* 온도 */
+.temperature{
+    grid-area: temperature;
+    -ms-grid-row : 2;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient :vertical;
+    -webkit-box-direction :normal;
+        -ms-flex-direction :column;
+            flex-direction :column;
+    padding: 0px 10px;
+}
+
+/* 에어 퀄리티 */
+.airqulity{
+    grid-area: airqulity;
+    -ms-grid-row : 2;
+    -ms-grid-column: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient :vertical;
+    -webkit-box-direction :normal;
+        -ms-flex-direction :column;
+            flex-direction :column;
+    padding: 0px 10px;
+}
+
+
+.detailouter{
+    grid-area: detailouter;
+    -ms-grid-row : 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    display: flex;
+    display: -ms-flexbox;
+    background-color: #999999;
+    border-radius: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;      
+}
+
+.detail-wrapper{
+    width: 95%;
+    height: 85%;
+    overflow: hidden;
+}
+
+h2.title{
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+p.title{
+    font-size: 14px;
+    margin: 0px;
+}
+
+
+p.percent{
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.good{
+    color : #33CC33;
+}
+
+.bad{
+    color : #FF0000;
+}
+
+.normal{
+    color : #000000;
+}
+
