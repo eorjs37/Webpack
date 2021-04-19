@@ -10,7 +10,7 @@
             "tommorrow tommorrow tommorrow" 
             ;
     
-    grid-auto-rows: 0.5fr 0.5fr 2fr 2fr;        
+    grid-auto-rows: 30px 60px 70px 100px;        
 }
 
 
@@ -60,6 +60,7 @@
     display: flex;
     display: -ms-flexbox;
     background-color: #999999;
+    /* background-color: orange; */
     border-radius: 5px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -83,6 +84,13 @@ h2.title{
 p.title{
     font-size: 14px;
     margin: 0px;
+    font-weight: 900;
+}
+
+p.contents{
+    font-size: 12px;
+    margin: 0px;
+    font-weight: 600;
 }
 
 
