@@ -1,20 +1,20 @@
 const API_KEY = '58e9da005937758f4243219ec8dc3f2a';
 const gridcontainer = document.querySelector('.grid-container');
-const CITY = ['Ulsan','Busan','Seoul','Daegu'];
+const CITY = ['Ulsan','Busan','Seoul'];
 const CITY_WEATHER = Array(CITY.length);
 
-function init(){
+export function weatherinit(){
     cityWeather();
 }
 
-function dateFormat(date){
+const dateFormat = (date) =>{
     const hour = date.getHours() < 10 ? '0'+date.getHours() : date.getHours();
     const time = date.getMinutes() < 10 ? '0' +date.getMinutes() : date.getMinutes();
 
     return hour + ' : ' +time;
 }
 
-function createItem(){
+const  createItem = () =>{
     CITY_WEATHER.forEach(function(value,idx){
         //title
         const title = document.createElement('h2');
@@ -148,7 +148,7 @@ function createItem(){
     })
 }
 
- async function cityWeather(){
+async  function cityWeather(){
     let idx =0;
     for(const cityName of CITY){
         await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`)
@@ -168,5 +168,3 @@ function createItem(){
     //item생성하기
     createItem();
 }
-
-init();

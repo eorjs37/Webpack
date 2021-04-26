@@ -1,0 +1,27 @@
+{
+  "name": "VanillaJs",
+  "version": "1.0.0",
+  "description": "본 프로젝트는 VanillaJs으로 만든 프로젝트이며 날씨데이터를 통하여 전국 도시의 날씨 상태를 카드 형태로 나타내고자 한다.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eorjs37/VanillaJs.git"
+  },
+  "scripts": {
+    "build" :"webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eorjs37/VanillaJs/issues"
+  },
+  "homepage": "https://github.com/eorjs37/VanillaJs#readme",
+  "devDependencies": {
+    "webpack": "^5.35.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

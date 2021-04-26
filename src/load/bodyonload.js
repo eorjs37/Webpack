@@ -1,5 +1,6 @@
-const body =document.querySelector('body');
-function init(){
+export function init(){
+    const body =document.querySelector('body');
+
     const imageNumber = Math.floor((Math.random()*3)+1);
 
     body.style.backgroundRepeat="no-repeat";
@@ -9,5 +10,3 @@ function init(){
     body.style.opacity="0.6";
     body.style.backgroundPosition="center";
 }
-
-init();
