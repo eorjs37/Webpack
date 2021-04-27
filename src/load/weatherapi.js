@@ -1,6 +1,6 @@
 const API_KEY = '58e9da005937758f4243219ec8dc3f2a';
 
-const CITY = ['Ulsan','Busan','Seoul'];
+const CITY = ['Ulsan','Busan','Seoul','Daegu','Incheon','Gwangju','Daejeon'];
 const CITY_WEATHER = Array(CITY.length);
 
 export function weatherinit(){
