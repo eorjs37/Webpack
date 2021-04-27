@@ -2,13 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 module.exports = {
   mode : 'none',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module:{
     rules : [
@@ -18,7 +17,15 @@ module.exports = {
           'style-loader',
           'css-loader'
         ] 
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          // publicPath: "./dist/assets",
+          name: 'assets/[name].[ext]'
+        },
+      },
     ]
   },
   plugins :[
@@ -26,7 +33,7 @@ module.exports = {
       cleanAfterEveryBuildPatterns: ['dist']
     }),
     new HtmlWebpackPlugin({
-      title: "Output Management"
+      title: "Vanillajs"
     })
   ]
 };
