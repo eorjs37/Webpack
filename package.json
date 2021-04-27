@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/eorjs37/VanillaJs#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.4",
     "file-loader": "^6.2.0",
@@ -27,6 +30,8 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@babel/polyfill": "^7.12.1",
+    "lodash": "^4.17.21",
+    "whatwg-fetch": "^3.6.2"
   }
 }
