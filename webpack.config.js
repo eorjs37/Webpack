@@ -4,13 +4,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode : 'none',
-  entry: './src/index.js',
+  target: ['web', 'es5'],
+  entry: ['@babel/polyfill','whatwg-fetch','./src/index.js'],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
   },
   module:{
     rules : [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
       {
         test : /\.css$/,
         use: [
@@ -22,7 +29,6 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         loader: "file-loader",
         options: {
-          // publicPath: "./dist/assets",
           name: 'assets/[name].[ext]'
         },
       },
