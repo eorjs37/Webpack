@@ -1,15 +1,19 @@
 import '../../css/index.css';
 import '../../css/grid.css';
 import '../../css/card.css';
+import '../assets/1.jpg'
+import '../assets/2.jpg'
+import '../assets/3.jpg'
+
+
 
 export function init(){
     const body =document.querySelector('body');
 
     const imageNumber = Math.floor((Math.random()*3)+1);
-
+    
     body.style.backgroundRepeat="no-repeat";
-    body.style.backgroundImage=`url(../images/${imageNumber}.jpg)`;
-    // body.style.backgroundImage='url(./images/' + imageNumber +'.jpg)';
+    body.style.backgroundImage=`url(./assets/${imageNumber}.jpg)`;
     body.style.backgroundSize="cover";
     body.style.opacity="0.6";
     body.style.backgroundPosition="center";
