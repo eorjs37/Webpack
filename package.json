@@ -8,7 +8,8 @@
     "url": "git+https://github.com/eorjs37/VanillaJs.git"
   },
   "scripts": {
-    "build": "webpack --watch"
+    "dev" :"webpack --mode=development --watch",
+    "prod": "webpack --mode=production --watch"
   },
   "keywords": [],
   "author": "",
