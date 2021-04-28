@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode : 'none',
   target: ['web', 'es5'],
   entry: ['@babel/polyfill','whatwg-fetch','./src/index.js'],
   output: {
