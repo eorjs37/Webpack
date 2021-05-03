@@ -4,7 +4,7 @@ const CITY = ['Ulsan','Busan','Seoul','Daegu','Incheon','Gwangju','Daejeon'];
 const CITY_WEATHER = Array(CITY.length);
 
 export function weatherinit(){
-    cityWeather();
+       cityWeather();
 }
 
 const dateFormat = (date) =>{
