@@ -38,7 +38,9 @@ module.exports = {
       cleanAfterEveryBuildPatterns: ['dist']
     }),
     new HtmlWebpackPlugin({
-      title: "Vanillajs"
+      title: "Vanillajs",
+      filename :"index.html",
+      template : "src/index.html"
     })
   ]
 };
