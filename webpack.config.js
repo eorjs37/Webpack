@@ -10,6 +10,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
+  resolve :{
+    alias :{
+      Style : path.resolve(__dirname,'./css/'),
+      '@' : path.resolve(__dirname,'./src/')
+    }
+  },
   module:{
     rules : [
       {
