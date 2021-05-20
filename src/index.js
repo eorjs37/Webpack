@@ -1,4 +1,3 @@
-import {init} from './load/bodyonload';
-
-init();
-
+import {App} from './load/App'
+const app = new App();
+app.appLoad();

@@ -38,18 +38,29 @@ eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/in
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _load_bodyonload__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./load/bodyonload */ \"./src/load/bodyonload.js\");\n\n(0,_load_bodyonload__WEBPACK_IMPORTED_MODULE_0__.init)();\n\n//# sourceURL=webpack://VanillaJs/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _load_App__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./load/App */ \"./src/load/App.js\");\n\nvar app = new _load_App__WEBPACK_IMPORTED_MODULE_0__.App();\napp.appLoad();\n\n//# sourceURL=webpack://VanillaJs/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/load/bodyonload.js":
-/*!********************************!*\
-  !*** ./src/load/bodyonload.js ***!
-  \********************************/
+/***/ "./src/load/App.js":
+/*!*************************!*\
+  !*** ./src/load/App.js ***!
+  \*************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"init\": function() { return /* binding */ init; }\n/* harmony export */ });\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css/index.css */ \"./css/index.css\");\n/* harmony import */ var _css_grid_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css/grid.css */ \"./css/grid.css\");\n/* harmony import */ var _css_card_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/card.css */ \"./css/card.css\");\n/* harmony import */ var _assets_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/1.jpg */ \"./src/assets/1.jpg\");\n/* harmony import */ var _assets_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/2.jpg */ \"./src/assets/2.jpg\");\n/* harmony import */ var _assets_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/3.jpg */ \"./src/assets/3.jpg\");\n// import '../../css/index.css';\n// import 'Style/index.css'\n\n\n\n\n\n\nfunction init() {\n  var imageNumber = Math.floor(Math.random() * 3 + 1);\n  var main = document.querySelector('main.main-container');\n  main.style.backgroundImage = \"url(./assets/\".concat(imageNumber, \".jpg)\");\n}\n\n//# sourceURL=webpack://VanillaJs/./src/load/bodyonload.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"App\": function() { return /* binding */ App; }\n/* harmony export */ });\n/* harmony import */ var _Init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Init */ \"./src/load/Init.js\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\nvar App = /*#__PURE__*/function () {\n  function App(pInit) {\n    _classCallCheck(this, App);\n\n    this.pInit = new _Init__WEBPACK_IMPORTED_MODULE_0__.init();\n  }\n  /* 최초 로드 */\n\n\n  _createClass(App, [{\n    key: \"appLoad\",\n    value: function appLoad() {\n      var imgNum = Math.floor(Math.random() * 3 + 1);\n      var main = document.querySelector('main.main-container');\n      var Init = new _Init__WEBPACK_IMPORTED_MODULE_0__.init(imgNum, main);\n      Init.setBackGroundImg();\n    }\n  }]);\n\n  return App;\n}();\n\n//# sourceURL=webpack://VanillaJs/./src/load/App.js?");
+
+/***/ }),
+
+/***/ "./src/load/Init.js":
+/*!**************************!*\
+  !*** ./src/load/Init.js ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"init\": function() { return /* binding */ init; }\n/* harmony export */ });\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css/index.css */ \"./css/index.css\");\n/* harmony import */ var _css_grid_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../css/grid.css */ \"./css/grid.css\");\n/* harmony import */ var _css_card_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/card.css */ \"./css/card.css\");\n/* harmony import */ var _assets_1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/1.jpg */ \"./src/assets/1.jpg\");\n/* harmony import */ var _assets_2_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/2.jpg */ \"./src/assets/2.jpg\");\n/* harmony import */ var _assets_3_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/3.jpg */ \"./src/assets/3.jpg\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\n\n\n\n\nvar init = /*#__PURE__*/function () {\n  function init(imageNumber, main) {\n    _classCallCheck(this, init);\n\n    this.imageNumber = Math.floor(Math.random() * 3 + 1);\n    this.main = document.querySelector('main.main-container');\n  }\n\n  _createClass(init, [{\n    key: \"setBackGroundImg\",\n    value: function setBackGroundImg() {\n      this.main.style.backgroundImage = \"url(./assets/\".concat(this.imageNumber, \".jpg)\");\n    }\n  }]);\n\n  return init;\n}();\n\n//# sourceURL=webpack://VanillaJs/./src/load/Init.js?");
 
 /***/ }),
 

@@ -11,9 +11,9 @@ module.exports = {
     publicPath: '',
   },
   resolve :{
+    extensions: ['.jsx', '.ts', '.tsx', '.js','.css'],
     alias :{
-      Style : path.resolve(__dirname,'./css/'),
-      '@' : path.resolve(__dirname,'./src/')
+      Style : path.resolve(__dirname,'./src/css')
     }
   },
   module:{
