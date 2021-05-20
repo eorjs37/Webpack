@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   target: ['web', 'es5'],
@@ -11,7 +12,6 @@ module.exports = {
     publicPath: '',
   },
   resolve :{
-    extensions: ['.jsx', '.ts', '.tsx', '.js','.css'],
     alias :{
       Style : path.resolve(__dirname,'./src/css')
     }
@@ -25,10 +25,8 @@ module.exports = {
       },
       {
         test : /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ] 
+        use : [MiniCssExtractPlugin.loader,'css-loader']
+        // use: [ 'style-loader','css-loader'] 
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -41,12 +39,13 @@ module.exports = {
   },
   plugins :[
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['dist']
+       cleanAfterEveryBuildPatterns: ['dist']
     }),
     new HtmlWebpackPlugin({
       title: "Vanillajs",
       filename :"index.html",
       template : "src/index.html"
-    })
+    }),
+    new MiniCssExtractPlugin({filename : 'app.css'})
   ]
 };

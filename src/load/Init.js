@@ -1,6 +1,3 @@
-import '../../css/index.css';
-import '../../css/grid.css';
-import '../../css/card.css';
 import '../assets/1.jpg'
 import '../assets/2.jpg'
 import '../assets/3.jpg'
