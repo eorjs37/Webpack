@@ -12,6 +12,9 @@ export class App{
 
         const Init = new init(imgNum,main);
         Init.setBackGroundImg();
+
+        /* 날씨정보 초기화  */
+        Init.setCityWeater();
     }
 }
 

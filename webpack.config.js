@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  name: 'browser',
   target: ['web', 'es5'],
   entry: ['@babel/polyfill','whatwg-fetch','./src/index.js'],
   output: {
@@ -13,7 +14,8 @@ module.exports = {
   },
   resolve :{
     alias :{
-      Style : path.resolve(__dirname,'./src/css')
+      ImagePath : path.resolve(__dirname,'./src/assets'),
+      Load : path.resolve(__dirname,'./src/load')
     }
   },
   module:{
@@ -26,7 +28,6 @@ module.exports = {
       {
         test : /\.css$/,
         use : [MiniCssExtractPlugin.loader,'css-loader']
-        // use: [ 'style-loader','css-loader'] 
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
