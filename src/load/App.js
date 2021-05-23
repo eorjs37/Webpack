@@ -1,4 +1,5 @@
 import { init } from './Init' 
+import 'ImagePath/icon/computer.svg'
 
 export class App{
     constructor(pInit){

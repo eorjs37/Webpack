@@ -1,6 +1,8 @@
-require('./css/index.css');
-require('./css/card.css');
-require('./css/grid.css');
+import './css/index.css'
+import './css/header.css';
+import './css/card.css';
+import './css/grid.css';
+import './css/flex.css';
 
 import {App} from './load/App';
 
