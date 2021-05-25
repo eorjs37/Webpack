@@ -1,5 +1,9 @@
 import { init } from './Init' 
-import 'ImagePath/icon/computer.svg'
+import 'ImagePath/icon/computer.svg';
+import 'ImagePath/icon/github.svg';
+import 'ImagePath/icon/phone.svg';
+import 'ImagePath/icon/gmail.svg';
+
 
 export class App{
     constructor(pInit){

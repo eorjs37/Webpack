@@ -44,6 +44,7 @@ header > .container > .container-item > .start > .startitem:nth-child(1){
 
 img.icon{
     height: 30px;
+    cursor: pointer;
 }
 
 .center{
