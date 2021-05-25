@@ -13,11 +13,11 @@ header > .container {
             justify-content: space-between;
 }
 
-header > .container > .item{
+header > .container > .container-item{
     background-color: #FFFFFF;
 }
 
-header > .container > .item > .start{
+header > .container > .container-item > .start{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -33,7 +33,11 @@ header > .container > .item > .start{
             flex-direction: row;
 }
 
-header > .container > .item > .start > .startitem:nth-child(1){
+.container-item:nth-child(3){
+    display: flex;
+}
+
+header > .container > .container-item > .start > .startitem:nth-child(1){
     flex-shrink: 0;
 	width: 70px;
 }
@@ -95,4 +99,44 @@ img.icon{
 
 .menu-trigger.active span:nth-of-type(3){
     transform : translateY(-10px) rotate(45deg);
+}
+
+.flex-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;        
+}
+
+.flex-container > .flex-item:nth-child(1){
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px;
+}
+
+.flex-container > .flex-item:nth-child(2){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack : start;
+        -ms-flex-pack : start;
+            justify-content : flex-start;
+}
+
+.flex-container > .flex-item:nth-child(2) > .flex-title{
+    background-color: #fff !important;
+    line-height: 50px;
+}
+
+.flex-container > .flex-item:nth-child(2) > .flex-title{
+    background-color: #fff !important;
+    line-height: 50px;
 }

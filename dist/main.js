@@ -38,7 +38,7 @@ eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/in
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var _css_card_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/card.css */ \"./src/css/card.css\");\n/* harmony import */ var _css_grid_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/grid.css */ \"./src/css/grid.css\");\n/* harmony import */ var _css_flex_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/flex.css */ \"./src/css/flex.css\");\n/* harmony import */ var _load_App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./load/App */ \"./src/load/App.js\");\n\n\n\n\n\n\nvar app = new _load_App__WEBPACK_IMPORTED_MODULE_5__.App();\napp.appLoad();\n\n//# sourceURL=webpack://VanillaJs/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var _css_card_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/card.css */ \"./src/css/card.css\");\n/* harmony import */ var _css_grid_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/grid.css */ \"./src/css/grid.css\");\n/* harmony import */ var _load_App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./load/App */ \"./src/load/App.js\");\n\n\n\n\n\nvar app = new _load_App__WEBPACK_IMPORTED_MODULE_4__.App();\napp.appLoad();\n\n//# sourceURL=webpack://VanillaJs/./src/index.js?");
 
 /***/ }),
 
@@ -3255,17 +3255,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://VanillaJs/./src/css/card.css?");
-
-/***/ }),
-
-/***/ "./src/css/flex.css":
-/*!**************************!*\
-  !*** ./src/css/flex.css ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://VanillaJs/./src/css/flex.css?");
 
 /***/ }),
 
