@@ -1,8 +1,10 @@
 import { init } from './Init' 
+import { MenuBar} from './MenuBar';
 import 'ImagePath/icon/computer.svg';
 import 'ImagePath/icon/github.svg';
 import 'ImagePath/icon/phone.svg';
 import 'ImagePath/icon/gmail.svg';
+import 'ImagePath/icon/left-arrow.svg';
 
 
 export class App{
@@ -16,10 +18,12 @@ export class App{
         const main = document.querySelector('main.main-container');
 
         const Init = new init(imgNum,main);
+        const menuBar = new MenuBar();
         Init.setBackGroundImg();
 
         /* 날씨정보 초기화  */
         Init.setCityWeater();
+
     }
 }
 

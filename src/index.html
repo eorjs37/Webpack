@@ -6,11 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  </head>
   <body>
+    <div class="sidebar" id="menubar">
+        <div class="sidebar-flex">
+            <div class="sidebar-menu-item"> 
+                <div class="user-info">
+
+                </div>
+                <div class="menu-exit">
+                    <div class="center" id="exit-icon">
+                        <img class="icon" src="./assets/left-arrow.svg">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="solid">
+
+            <div class="sidebar-menu-item"> </div>
+            <div class="sidebar-menu-item"> </div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="container-item">
                 <div class="hamburger-menu">
-                    <div class="center">
+                    <div class="center" id="hambuger-menu">
                         <a class="menu-trigger" href="#">
                             <span></span>
                             <span></span>
@@ -45,6 +65,8 @@
         </div>
     </header>
 
+    
+
     <main class="main-container">
         <article class="main-item">
             <div class="grid-container">
@@ -52,5 +74,8 @@
             </div>
         </article>
     </main>
+
+    <!-- overlay -->
+    <div id="overlay"></div>
   </body>
 </html>
