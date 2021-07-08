@@ -7,13 +7,9 @@ module.exports = {
   name: "browser",
   target: ["web", "es5"],
   entry: ["@babel/polyfill", "whatwg-fetch", "./src/index.js"],
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "",
-  },
   resolve: {
     alias: {
+      "@": path.resolve(__dirname, "./src"),
       ImagePath: path.resolve(__dirname, "./src/assets"),
       Load: path.resolve(__dirname, "./src/load"),
     },
@@ -27,7 +23,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["autoprefixer"],
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -51,8 +58,13 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    compress: true,
     hot: true,
+    inline: false,
     port: 9000,
+  },
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "",
   },
 };
