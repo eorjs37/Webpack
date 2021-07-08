@@ -1,52 +1,58 @@
-const path = require('path');
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  name: 'browser',
-  target: ['web', 'es5'],
-  entry: ['@babel/polyfill','whatwg-fetch','./src/index.js'],
+  name: "browser",
+  target: ["web", "es5"],
+  entry: ["@babel/polyfill", "whatwg-fetch", "./src/index.js"],
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '',
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "",
   },
-  resolve :{
-    alias :{
-      ImagePath : path.resolve(__dirname,'./src/assets'),
-      Load : path.resolve(__dirname,'./src/load')
-    }
+  resolve: {
+    alias: {
+      ImagePath: path.resolve(__dirname, "./src/assets"),
+      Load: path.resolve(__dirname, "./src/load"),
+    },
   },
-  module:{
-    rules : [
+  module: {
+    rules: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: ["babel-loader"],
       },
       {
-        test : /\.css$/,
-        use : [MiniCssExtractPlugin.loader,'css-loader']
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         loader: "file-loader",
         options: {
-          name: 'assets/[name].[ext]'
+          name: "assets/[name].[ext]",
         },
       },
-    ]
+    ],
   },
-  plugins :[
+  plugins: [
     new CleanWebpackPlugin({
-       cleanAfterEveryBuildPatterns: ['dist']
+      cleanAfterEveryBuildPatterns: ["dist"],
     }),
     new HtmlWebpackPlugin({
       title: "Vanillajs",
-      filename :"index.html",
-      template : "src/index.html"
+      filename: "index.html",
+      template: "src/index.html",
     }),
-    new MiniCssExtractPlugin({filename : 'app.css'})
-  ]
+    new MiniCssExtractPlugin({ filename: "app.css" }),
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    hot: true,
+    port: 9000,
+  },
 };
