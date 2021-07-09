@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "webpack --mode=development --watch",
     "prod": "webpack --mode=production --watch",
-    "serve": "webpack serve --mode=development",
+    "serve": "webpack serve --progress",
     "lint": "eslint ."
   },
   "keywords": [],
