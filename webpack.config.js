@@ -5,9 +5,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   name: "browser",
+  mode: "development",
   target: ["web", "es5"],
   entry: ["@babel/polyfill", "whatwg-fetch", "./src/index.js"],
   resolve: {
+    extensions: [".js"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
       ImagePath: path.resolve(__dirname, "./src/assets"),
@@ -45,6 +47,7 @@ module.exports = {
       },
     ],
   },
+  devtool: "inline-source-map",
   plugins: [
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ["dist"],
@@ -63,8 +66,8 @@ module.exports = {
     port: 9000,
   },
   output: {
-    filename: "main.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "",
+    clean: true,
   },
 };
