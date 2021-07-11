@@ -60,10 +60,7 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: "app.css" }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    hot: true,
-    inline: false,
-    port: 9000,
+    port: 9001,
   },
   output: {
     filename: "bundle.js",
