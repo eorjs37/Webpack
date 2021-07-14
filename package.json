@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/eorjs37/VanillaJs#readme",
   "devDependencies": {
-    "@babel/core": "^7.13.16",
+    "@babel/core": "^7.14.6",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.15",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
@@ -33,21 +34,18 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
-    "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.35.0",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "lodash": "^4.17.21",
+    "webpack-dev-server": "^3.11.2",
     "whatwg-fetch": "^3.6.2"
   },
+  "dependencies": {},
   "browserslist": [
+    "IE 11",
     "> 1%",
     "last 2 versions"
   ]
