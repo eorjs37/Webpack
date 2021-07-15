@@ -4,12 +4,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  name: "browser",
   mode: "development",
-  target: ["web", "es5"],
+  target: "web",
   entry: ["@babel/polyfill", "whatwg-fetch", "./src/index.js"],
   resolve: {
-    extensions: [".js"],
     alias: {
       "@": path.resolve(__dirname, "./src"),
       ImagePath: path.resolve(__dirname, "./src/assets"),
@@ -21,7 +19,12 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.css$/,
@@ -45,6 +48,10 @@ module.exports = {
           name: "assets/[name].[ext]",
         },
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   devtool: "inline-source-map",
@@ -66,5 +73,8 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    environment: {
+      arrowFunction: false,
+    },
   },
 };
