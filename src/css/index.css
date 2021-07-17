@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
     box-sizing: border-box;
 }
 
 .main-container{
-    height: 100vh; /* 화면 높이의 퍼센트 100vh->100% , 1vh->1%*/
     display: flex;
+    margin: 0;
     display: -ms-flexbox;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -22,8 +21,8 @@
     background-size: cover;
 }
 
+
 .main-item{
-    height: 100vh;
     width: 100vh;
 }
 
