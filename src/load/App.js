@@ -17,8 +17,9 @@ export class App {
     const main = document.querySelector("main.main-container");
 
     const Init = new init(imgNum, main);
-    new MenuBar();
     Init.setBackGroundImg();
+
+    new MenuBar();
 
     /* 날씨정보 초기화  */
     Init.setCityWeater();
