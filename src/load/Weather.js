@@ -1,9 +1,12 @@
+import { Card } from "@/load/Weather/Card";
+import { CardItem } from "@/load/Weather/CardItem";
 const API_KEY = "58e9da005937758f4243219ec8dc3f2a";
+const MAIN_ITEM = document.querySelector(".main-item");
 
 const CITY = [
+  "Seoul",
   "Ulsan",
   "Busan",
-  "Seoul",
   "Daegu",
   "Incheon",
   "Gwangju",
@@ -40,11 +43,11 @@ export class Weather {
   }
 
   createItem() {
-    //const gridContainer = document.querySelector(".grid-container");
+    const card = new Card(MAIN_ITEM);
+    card.render();
+
     CITY_WEATHER.forEach((value, idx) => {
-      //title
-      console.log(value);
-      console.log(idx);
+      new CardItem(card.$self, value, idx);
     });
   }
 }
