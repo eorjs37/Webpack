@@ -1,7 +1,6 @@
 import "ImagePath/1.jpg";
 import "ImagePath/2.jpg";
 import "ImagePath/3.jpg";
-import { Weather } from "Load/Weather";
 
 export class init {
   constructor() {
@@ -12,9 +11,5 @@ export class init {
 
   setBackGroundImg() {
     this.main.style.backgroundImage = `url(./assets/${this.imageNumber}.jpg)`;
-  }
-
-  setCityWeater() {
-    this.cityWeater.cityWeater();
   }
 }
