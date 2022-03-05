@@ -1,5 +1,4 @@
 import { init } from "./Init";
-import { MenuBar } from "./MenuBar";
 import "ImagePath/icon/computer.svg";
 import "ImagePath/icon/github.svg";
 import "ImagePath/icon/phone.svg";
@@ -15,13 +14,5 @@ export class App {
   appLoad() {
     const imgNum = Math.floor(Math.random() * 3 + 1);
     const main = document.querySelector("main.main-container");
-
-    const Init = new init(imgNum, main);
-    Init.setBackGroundImg();
-
-    new MenuBar();
-
-    /* 날씨정보 초기화  */
-    Init.setCityWeater();
   }
 }
