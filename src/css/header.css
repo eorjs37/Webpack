@@ -36,10 +36,6 @@ header > .container > .container-item:nth-child(1){
     flex-shrink: 0;
 	width: 70px;
 }
-.hamburger-menu:hover{
-    background-color: gray;
-    opacity: 0.4;
-}
 
 .site-title{
     display: -webkit-box;
